@@ -9,23 +9,27 @@ export default function Menu({ categories }) {
   return (
     <>
       <Head>
-        <title>Menu – Crown Coffee</title>
-        <meta name="description" content="Explore our full menu of coffees, teas, and pastries." />
+        <title>Menu — Crown Coffee</title>
+        <meta name="description" content="Explore our full menu of single-origin coffees, specialty teas, and artisan pastries at Crown Coffee." />
       </Head>
 
       <Header />
 
       <main className={styles.main}>
         <div className={styles.hero}>
+          <span className={styles.heroEyebrow}>Dhaka, Bangladesh</span>
           <h1 className={styles.title}>Our Menu</h1>
-          <p className={styles.subtitle}>Fresh, crafted, and made with love</p>
+          <p className={styles.subtitle}>Sourced with care, prepared with precision</p>
         </div>
 
         <div className={styles.container}>
           {categories && categories.length > 0 ? (
             categories.map(category => (
               <section key={category._id} className={styles.category}>
-                <h2 className={styles.categoryName}>{category.name}</h2>
+                <div className={styles.categoryHeader}>
+                  <h2 className={styles.categoryName}>{category.name}</h2>
+                  <div className={styles.categoryLine} />
+                </div>
                 {category.description && (
                   <p className={styles.categoryDesc}>{category.description}</p>
                 )}
@@ -38,7 +42,7 @@ export default function Menu({ categories }) {
             ))
           ) : (
             <div className={styles.empty}>
-              <p>Menu coming soon! Check back later ☕</p>
+              <p>Our menu is coming soon — check back shortly. ☕</p>
             </div>
           )}
         </div>
@@ -52,7 +56,7 @@ export default function Menu({ categories }) {
 export async function getStaticProps() {
   const categories = await getMenuCategories();
   return {
-    props: { categories },
-    revalidate: 60, // Revalidate every 60 seconds
+    props: { categories: categories || [] },
+    revalidate: 60,
   };
 }

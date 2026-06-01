@@ -1,56 +1,95 @@
+/* ─── Footer ─────────────────────────────────── */
 .footer {
-  background-color: var(--espresso);
-  color: var(--champagne);
-  padding: 3rem 0 0;
-  margin-top: 4rem;
+  background-color: var(--ink);
+  color: var(--fog);
+  padding: 5rem 0 0;
+  margin-top: 6rem;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 2rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
+  padding: 0 2.5rem 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
 }
 
+/* Brand column */
 .brand {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 1rem;
 }
 
 .crown {
-  font-size: 2rem;
-  color: var(--gold);
+  font-size: 1.75rem;
+  color: var(--warm);
 }
 
 .name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  color: var(--gold);
-  letter-spacing: 1px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: -0.01em;
 }
 
 .tagline {
-  font-style: italic;
-  color: var(--champagne);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  color: var(--ash);
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 280px;
+}
+
+/* Info column */
+.columnTitle {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fog);
+  margin-bottom: 1.25rem;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  color: var(--champagne);
+  gap: 0.625rem;
 }
 
+.info p {
+  font-size: 0.875rem;
+  color: var(--ash);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Bottom bar */
 .bottom {
-  border-top: 1px solid var(--mahogany);
-  padding: 1.5rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 1.5rem 2.5rem;
   text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  font-size: 0.75rem;
+  color: var(--smoke);
+  letter-spacing: 0.02em;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }
