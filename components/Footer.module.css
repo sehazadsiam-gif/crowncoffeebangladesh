@@ -1,0 +1,56 @@
+.footer {
+  background-color: var(--espresso);
+  color: var(--champagne);
+  padding: 3rem 0 0;
+  margin-top: 4rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.crown {
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--champagne);
+  font-size: 0.95rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--champagne);
+}
+
+.bottom {
+  border-top: 1px solid var(--mahogany);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}

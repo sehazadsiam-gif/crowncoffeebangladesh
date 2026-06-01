@@ -1,0 +1,80 @@
+.header {
+  background-color: var(--espresso);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold);
+}
+
+.crown {
+  font-size: 1.8rem;
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  color: var(--champagne);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--gold);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.link:hover {
+  color: var(--gold);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    gap: 1rem;
+  }
+  .name {
+    font-size: 1.2rem;
+  }
+}

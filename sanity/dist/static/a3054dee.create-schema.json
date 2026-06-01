@@ -1,0 +1,177 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Item Name"
+      },
+      {
+        "rows": 3,
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 0
+              }
+            ]
+          }
+        ],
+        "name": "price",
+        "type": "number",
+        "title": "Price ($)"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "image",
+        "type": "image"
+      },
+      {
+        "to": [
+          {
+            "type": "category"
+          }
+        ],
+        "name": "category",
+        "type": "reference"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Hot",
+              "value": "hot"
+            },
+            {
+              "title": "Iced",
+              "value": "iced"
+            },
+            {
+              "title": "Vegan",
+              "value": "vegan"
+            },
+            {
+              "title": "Gluten Free",
+              "value": "gluten-free"
+            },
+            {
+              "title": "Popular",
+              "value": "popular"
+            },
+            {
+              "title": "New",
+              "value": "new"
+            }
+          ]
+        },
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "tags",
+        "type": "array"
+      },
+      {
+        "initialValue": true,
+        "name": "available",
+        "type": "boolean"
+      },
+      {
+        "initialValue": 0,
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "menuItem",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Category Name"
+      },
+      {
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "initialValue": 0,
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      }
+    ],
+    "name": "category",
+    "type": "document",
+    "title": "Menu Category"
+  },
+  {
+    "fields": [
+      {
+        "name": "cafeName",
+        "type": "string"
+      },
+      {
+        "name": "tagline",
+        "type": "string"
+      },
+      {
+        "name": "address",
+        "type": "string"
+      },
+      {
+        "name": "phone",
+        "type": "string"
+      },
+      {
+        "name": "hours",
+        "type": "string",
+        "title": "Opening Hours"
+      },
+      {
+        "name": "logo",
+        "type": "image"
+      }
+    ],
+    "name": "siteSettings",
+    "type": "document"
+  }
+]
