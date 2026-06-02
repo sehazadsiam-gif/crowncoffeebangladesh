@@ -10,7 +10,7 @@ export default function Menu({ categories }) {
     <>
       <Head>
         <title>Menu — Crown Coffee</title>
-        <meta name="description" content="Explore our full menu of single-origin coffees, specialty teas, and artisan pastries at Crown Coffee." />
+        <meta name="description" content="Explore our full menu of single-origin coffees at Crown Coffee." />
       </Head>
 
       <Header />
