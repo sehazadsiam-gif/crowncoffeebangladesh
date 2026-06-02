@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { urlFor } from '../lib/sanity';
+import { Coffee } from 'lucide-react';
 import styles from './MenuItem.module.css';
 
 export default function MenuItem({ item }) {
@@ -17,7 +18,7 @@ export default function MenuItem({ item }) {
             className={styles.image}
           />
         ) : (
-          <div className={styles.placeholder}>☕</div>
+          <div className={styles.placeholder}><Coffee size={48} color="var(--tan)" strokeWidth={1.5} /></div>
         )}
         {!available && <span className={styles.soldOut}>Sold Out</span>}
       </div>

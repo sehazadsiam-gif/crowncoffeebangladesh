@@ -11,15 +11,21 @@
   "dependencies": {
     "@sanity/client": "^6.0.0",
     "@sanity/image-url": "^1.0.2",
-    "@sanity/vision": "^5.29.0",
+    "@sanity/vision": "^3.99.0",
+    "buffer": "^6.0.3",
+    "lucide-react": "^1.17.0",
     "next": "14.0.0",
     "next-sanity": "^5.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sanity": "^5.29.0"
+    "sanity": "^3.99.0",
+    "styled-components": "^6.4.2"
   },
   "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.16",
     "eslint": "8.0.0",
-    "eslint-config-next": "14.0.0"
+    "eslint-config-next": "14.0.0",
+    "typescript": "^6.0.3"
   }
 }

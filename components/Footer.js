@@ -1,3 +1,4 @@
+import { Crown, MapPin, Clock, Phone } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className={styles.container}>
         {/* Brand */}
         <div className={styles.brand}>
-          <span className={styles.crown}>♛</span>
+          <span className={styles.crown}><Crown size={24} /></span>
           <span className={styles.name}>Crown Coffee</span>
           <p className={styles.tagline}>
             Sourced with care, prepared with precision.
@@ -18,9 +19,9 @@ export default function Footer() {
         <div>
           <p className={styles.columnTitle}>Visit Us</p>
           <div className={styles.info}>
-            <p>📍 123 Coffee Street, Dhaka</p>
-            <p>⏰ Mon–Sun: 7am – 9pm</p>
-            <p>📞 +880 1XXX-XXXXXX</p>
+            <p><MapPin size={16} className={styles.icon} /> 123 Coffee Street, Dhaka</p>
+            <p><Clock size={16} className={styles.icon} /> Mon–Sun: 7am – 9pm</p>
+            <p><Phone size={16} className={styles.icon} /> +880 1XXX-XXXXXX</p>
           </div>
         </div>
 

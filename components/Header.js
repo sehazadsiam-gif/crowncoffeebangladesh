@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Crown } from 'lucide-react';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -6,7 +7,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.crown}>♛</span>
+          <span className={styles.crown}><Crown size={24} /></span>
           <span className={styles.name}>Crown Coffee</span>
         </Link>
         <nav className={styles.nav}>

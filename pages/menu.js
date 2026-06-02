@@ -42,7 +42,7 @@ export default function Menu({ categories }) {
             ))
           ) : (
             <div className={styles.empty}>
-              <p>Our menu is coming soon — check back shortly. ☕</p>
+              <p>Our menu is coming soon — check back shortly.</p>
             </div>
           )}
         </div>
